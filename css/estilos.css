@@ -408,11 +408,10 @@ body{
     display: block;
     padding-left: 10px;
     border-radius: 6px;
-    gap: 2em;
     font-size: 1rem;
     outline: none;
     border: none;
-    margin-right: 6px;
+    margin-right: 16px;
 }
 
 .footer__submit{
@@ -420,7 +419,7 @@ body{
     display: inline-block;
     height: 50px;
     padding: 0 20px ;
-    background-color: #045097;
+    background-color: #2091F9;
     border: none;
     font-size: 1rem;
     color: #fff;
@@ -456,9 +455,7 @@ body{
 
     .nav__link--menu{
         position: fixed;
-        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.937) 10%, rgba(0, 0, 0, 0.85) 100% ), url('../images/fondo.jpg');
-        background-size: cover;
-        background-position: center;
+        background-color: #000;
         top: 0;
         left: 0;
         height: 100%;
