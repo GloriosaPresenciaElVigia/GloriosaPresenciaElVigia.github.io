@@ -535,7 +535,7 @@ body{
 
 @media (max-width:800px){
     .hero{
-        grid-template-rows: 100px 1fr;
+        grid-template-rows: 120px 1fr;
     }
 
     .nav__menu{
@@ -567,7 +567,7 @@ body{
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.937) 10%, rgba(0, 0, 0, 0.32) 100% ), url('../images/fondo.jpg');
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.975) 10%, rgba(0, 0, 0, 0.32) 100% ), url('../images/fondo.jpg');
         background-size: cover;
         background-position: center;
         z-index: -1;
@@ -588,7 +588,7 @@ body{
     }
 
     .nav__logo{
-        width: 40%;
+        width: 35%;
         height: 90%;
         margin-right: 10px;
         margin-bottom: 10px;
@@ -623,7 +623,7 @@ body{
     }
 
     .pastores__container{
-        grid-template-columns: 30px 1fr 30px;
+        grid-template-columns: 20px 1fr 20px;
     }
 
     .pastores__body{
@@ -633,9 +633,27 @@ body{
         justify-items: center;
     }
 
+    .pastores__subtitle{
+        font-size: 18px;
+        margin-left: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .pastores__review{
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .review__title{
+        font-size: 18px;
+        margin-left: 0;
+        text-align: center;
+    }
+
     .pastores__img{
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
 
     .valores__container{
