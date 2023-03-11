@@ -2,6 +2,10 @@
 
 /*enlaces*/
 
+html{
+    scroll-behavior: smooth;
+}
+
 :root{
     --padding-container: 100px 0;
     --color_title: #000000;
@@ -20,7 +24,7 @@ body{
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    overflow:hidden;
+    overflow: hidden;
     padding: var(--padding-container);
 
 }
@@ -34,7 +38,7 @@ body{
     max-height: 800px;
     position: relative;
     display: grid;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 150px 1fr;
     color: rgb(255, 255, 255);
 }
 
@@ -47,7 +51,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.937) 10%, rgba(0, 0, 0, 0.32) 100% ), url('../images/fondo.jpg');
+    background-image: linear-gradient(180deg, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0.32) 100%), url('../images/fondo.jpg');
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -56,7 +60,7 @@ body{
 /*funciones de tamaños entre cada palabra .nav*/
 
 .nav{
-    --padding-container:0;
+    --padding-container: 0;
     height: 100%;
     display: flex;
     align-items: center;
@@ -101,6 +105,17 @@ body{
     display: var(--show, none);
 }
 
+.nav__logo{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 20% 0%;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
 /*Hero container*/
 
 .hero__container{
@@ -125,7 +140,7 @@ body{
 
 .cta{
     display: inline-block;
-    background-color: #045097;
+    background-color: #115ea5;
     justify-self: center;
     color: #ffff;
     text-decoration: none;
@@ -188,8 +203,7 @@ body{
 /*Knowledge*/
 
 .knowledge{
-    background-color: #e9d7f9;
-    background-image:  radial-gradient(#8f44f7 0.5px, transparent 0.5px), radial-gradient(#8f44f7 0.5px, #e9d7f9 0.5px);
+    background-color: #fff;
     background-size: 20px 20px;
     background-position: 0 0,10px 10px;
     overflow: hidden;
@@ -200,6 +214,7 @@ body{
     grid-template-columns: 1fr 1fr;
     gap: 1em;
     align-items: center;
+    padding: 50px;
 }
 
 .knowledge__picture{
@@ -211,8 +226,10 @@ body{
     margin-bottom: 15px;
 }
 
-.knowledge__img{
+.knowledge__video{
     width: 100%;
+    border: 1px solid;
+    border-radius: 5px;
     display: block;
 }
 
@@ -233,7 +250,7 @@ body{
 .pastores__container{
     display: grid;
     grid-template-columns: 50px 1fr 50px;
-    gap: 2em;
+    gap: 1em;
     align-items: center;
 }
 
@@ -247,12 +264,14 @@ body{
     grid-row: 1/2;
     opacity: 0;
     pointer-events: none;
+    padding: 50px;
 }
 
 .pastores__body--show{
     pointer-events: unset;
     opacity: 1;
     transition: opacity 1.5s ease-in-out;
+    padding: 50px;
 }
 
 .pastores__img{
@@ -263,12 +282,14 @@ body{
     object-position: 100% 0%;
 }
 
-.pastores__text{
+.pastores__texts{
     max-width: 700px;
 }
 
-.subtitle{
-    margin-bottom: 5px;
+.pastores__subtitle{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 .subtitle__title{
@@ -277,12 +298,17 @@ body{
 
 .pastores__review{
     display: grid;
-    gap: 2em;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .pastores__arrow{
     width: 90%;
     cursor: pointer;
+}
+
+.review__title{
+    margin-left: 10px;
 }
 
 /*questions*/
@@ -301,7 +327,7 @@ body{
 .questions__padding{
     padding: 0;
     transition: padding .3s;
-    border: 1px solid #5454D4;
+    border: 2px solid #5454D4;
     border-radius: 6px;
 }
 
@@ -334,7 +360,7 @@ body{
     align-items: center;
     align-self: flex-end;
     margin-left: 10px;
-    transition: transform .3s;
+    transition: transform .5s;
 }
 
 .questions__arrow--rotate{
@@ -344,54 +370,39 @@ body{
 .questions__show{
     text-align: left;
     height: 0;
-    transition: heigth .6s;
+    transition: heigth .4s;
 }
 
 .questions__show--add{
-    text-align: center;
+    text-align: left;
     height: 0;
-    transition: heigth .6s;
-}
-
-.questions__show--add--add{
-    font-size: 1.2rem;
-    text-align: center;
-    height: 0;
-    transition: heigth .6s;
-    overflow: hidden;
+    transition: heigth .4s;
 }
 
 .questions__img{
     display: block;
 }
 
-.questions__copy{
-    width: 60%;
-    gap: 2em;
-    margin: 0 auto;
-    margin-bottom: 30px;
+.questions__subtitle{
+    margin-bottom: 20px;
 }
 
-/*Valores*/
+.questions__copy{
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/*valores*/
 
 .valores{
     background-color: #fff;
 }
 
-.valores__subtitle{
-    text-align: center;
-    font-size: 50px;
-    gap: 50px;
-    margin-bottom: 10px;
-    display: grid;
-}
-
 .valores__title{
-    height: 100%;
-    width: 100%;
+    text-align: center;
     font-size: 2rem;
-    border: 1px solid #5454D4;
-    border-radius: 6px;
+    margin-top: 50px;
 }
 
 .valores__container{
@@ -419,11 +430,11 @@ body{
     transition: opacity 1.5s ease-in-out;
 }
 
-.subtitle{
-    font-size: 1.5rem;
-    margin-bottom: 5px;
+.valores__subtitle{
+    text-align: center;
     height: 100%;
     width: 103%;
+    font-size: 1.5rem;
 }
 
 .valores__arrow{
@@ -476,13 +487,12 @@ body{
     overflow: hidden;
 }
 
-.footer_input{
+.footer__input{
     background-color: #fff;
     height: 50px;
     display: block;
     padding-left: 10px;
     border-radius: 6px;
-    gap: 2em;
     font-size: 1rem;
     outline: none;
     border: none;
@@ -494,7 +504,7 @@ body{
     display: inline-block;
     height: 50px;
     padding: 0 20px ;
-    background-color: #045097;
+    background-color: #115ea5;
     border: none;
     font-size: 1rem;
     color: #fff;
@@ -524,15 +534,18 @@ body{
 /*Media queries*/
 
 @media (max-width:800px){
+    .hero{
+        grid-template-rows: 100px 1fr;
+    }
+
     .nav__menu{
         display: block;
+        justify-items: center;
     }
 
     .nav__link--menu{
         position: fixed;
-        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.937) 10%, rgba(0, 0, 0, 0.85) 100% ), url('../images/fondo.jpg');
-        background-size: cover;
-        background-position: center;
+        background-color: rgb(0, 0, 0);
         top: 0;
         left: 0;
         height: 100%;
@@ -547,6 +560,19 @@ body{
         transition: .7s opacity;
     }
 
+    .nav__link--menu::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.937) 10%, rgba(0, 0, 0, 0.32) 100% ), url('../images/fondo.jpg');
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+    }
+
     .nav__link--show{
         --show: block;
         opacity: 1;
@@ -559,6 +585,17 @@ body{
         right: 30px;
         width: 30px;
         cursor: pointer;
+    }
+
+    .nav__logo{
+        width: 40%;
+        height: 90%;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .nav__title{
+        font-size: 1.2rem;
     }
 
     .hero__title{
@@ -601,17 +638,12 @@ body{
         height: 200px;
     }
 
-    .questions__copy{
-        width: 100%;
-    }
-
-    .valores__title{
-        height: 100%;
-        width: 99%;
-    }
-
     .valores__container{
         grid-template-columns: 30px 1fr 30px;
+    }
+
+    .valores__subtitle{
+        font-size: 20px;
     }
 
     .valores__body{
@@ -619,6 +651,14 @@ body{
         grid-template-rows: max-content max-content;
         gap: 3em;
         justify-items: center;
+    }
+
+    .valores__arrow{
+        width: 110%;
+    }
+
+    .questions__copy{
+        width: 100%;
     }
 
     .footer__container{
