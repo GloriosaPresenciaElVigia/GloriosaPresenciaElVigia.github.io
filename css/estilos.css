@@ -68,6 +68,7 @@ body{
 
 .nav__title{
     font-weight: 300;
+    font-size: 1.5rem;
 }
 
 .nav__link{
@@ -77,7 +78,6 @@ body{
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 2em;
-
 }
 
 .nav__items{
@@ -103,17 +103,6 @@ body{
 
 .nav__close{
     display: var(--show, none);
-}
-
-.nav__logo{
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: 20% 0%;
-    margin-top: 10px;
-    margin-right: 20px;
-    margin-bottom: 10px;
 }
 
 /*Hero container*/
@@ -146,6 +135,10 @@ body{
     text-decoration: none;
     padding: 13px 30px;
     border-radius: 32px; 
+}
+
+.cta:hover{
+    background-color: #306ea9;
 }
 
 /*About */
@@ -217,20 +210,56 @@ body{
     padding: 50px;
 }
 
-.knowledge__picture{
-    max-width: 500px;
-}
-
 .knowledge__paragraph{
     line-height: 1.7;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.knowledge__video{
-    width: 100%;
+.knowledge__subtitle{
+    margin-bottom: 10px;
+}
+
+.knowledge__img{
+    width: 580px;
+    height: 340px;
     border: 1px solid;
     border-radius: 5px;
-    display: block;
+    margin: 0 auto;
+    background-image: url('../images/photo.jpg');
+    background-size: cover;
+    background-position: 100% 0%;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: transform .2s;
+}
+
+.knowledge__img:hover{
+    transform: scale(1.01);
+}
+
+.knowledge__link{
+    display: grid;
+    place-items: center;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.knowledge__youtube:hover{
+    width: 120px;
+}
+
+.knowledge__link:hover::after{
+    content: "";
+    display: grid;
+    place-items: center;
+    background-color: #00000037;
+    position: absolute;
+    width: 100%;
+    height: 500%;
+    z-index: -1;
 }
 
 /* Pastores*/
@@ -512,25 +541,6 @@ body{
     cursor: pointer;
 }
 
-.footer__copy{
-    --padding-container: 30px 0;
-    text-align: center;
-    color: #fff;
-}
-
-.footer__copyrigth{
-    font-weight: 300;
-}
-
-.footer__icons{
-    display: inline-flex;
-    margin-bottom: 10px;
-}
-
-.footer__img{
-    width: 30px;
-}
-
 /*Media queries*/
 
 @media (max-width:800px){
@@ -587,13 +597,6 @@ body{
         cursor: pointer;
     }
 
-    .nav__logo{
-        width: 35%;
-        height: 90%;
-        margin-right: 10px;
-        margin-bottom: 10px;
-    }
-
     .nav__title{
         font-size: 1.2rem;
     }
@@ -610,6 +613,11 @@ body{
         grid-column: 1/-1;
     }
 
+    .knowledge__subtitle{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
     .knowledge__container{
         grid-template-columns: 1fr;
         grid-template-rows: max-content 1fr;
@@ -617,9 +625,16 @@ body{
         text-align: center;
     }
 
-    .knowledge__picture{
+    .knowledge__img{
         grid-row: 1/2;
         justify-self: center;
+        height: 150%;
+        width: 100%;
+        background-position: 10% 20%;
+    }
+
+    .knowledge__link{
+        background-color: rgba(0, 0, 0, 0.087)
     }
 
     .pastores__container{
@@ -725,7 +740,7 @@ body{
 
     .pastores__container{
         grid-template-columns: 28px 1fr 28px;
-        gap: .9em;
+        gap: .2em;
     }
 
     .pastores__arrow{
@@ -769,9 +784,6 @@ body{
     }
 
 }
-
-
-
 
 
 
