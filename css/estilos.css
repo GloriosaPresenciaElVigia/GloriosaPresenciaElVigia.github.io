@@ -6,6 +6,12 @@ html{
     scroll-behavior: smooth;
 }
 
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
 :root{
     --padding-container: 100px 0;
     --color_title: #000000;
@@ -307,19 +313,19 @@ body{
     grid-row: 1/2;
     opacity: 0;
     pointer-events: none;
-    padding: 50px;
+    padding: 60px;
 }
 
 .pastores__body--show{
     pointer-events: unset;
     opacity: 1;
-    transition: opacity 1.5s ease-in-out;
-    padding: 50px;
+    transition: opacity 1s ease-in-out;
+    padding: 60px;
 }
 
 .pastores__img{
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
     object-fit: cover;
     object-position: 100% 0%;
@@ -346,8 +352,21 @@ body{
 }
 
 .pastores__arrow{
-    width: 90%;
+    background-color: rgba(149, 144, 144, 0.383);
+    backdrop-filter: blur(5px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    width: 100%;
     cursor: pointer;
+}
+
+.pastores__arrow:hover{
+    transform: scale(1.05);
+}
+
+.arrow--left{
+    margin-left: 15px;
 }
 
 .review__title{
@@ -481,8 +500,17 @@ body{
 }
 
 .valores__arrow{
-    width: 90%;
+    background-color: rgba(149, 144, 144, 0.383);
+    backdrop-filter: blur(5px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    width: 100%;
     cursor: pointer;
+}
+
+.valores__arrow:hover{
+    transform: scale(1.05);
 }
 
 /*Footer*/
@@ -564,16 +592,19 @@ body{
 
     .nav__menu{
         display: block;
-        justify-items: center;
+    }
+
+    .nav__menu--logo{
+        margin-right: 40px;
     }
 
     .nav__link--menu{
         position: fixed;
-        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.976);
         top: 0;
         left: 0;
         height: 100%;
-        width: 100%;
+        width: 60%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -582,19 +613,9 @@ body{
         opacity: 0;
         pointer-events: none;
         transition: .7s opacity;
-    }
-
-    .nav__link--menu::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.975) 10%, rgba(0, 0, 0, 0.32) 100% ), url('../images/fondo.jpg');
-        background-size: cover;
-        background-position: center;
-        z-index: -1;
+        border-right: 1px solid #fff;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 20px;
     }
 
     .nav__link--show{
@@ -605,14 +626,15 @@ body{
 
     .nav__close{
         position: absolute;
-        top: 30px;
-        right: 30px;
+        top: 40px;
+        left: 10px;
         width: 30px;
         cursor: pointer;
     }
 
-    .nav__title{
-        font-size: 1.2rem;
+    .nav__title{    
+        width: 100%;
+        margin-right: 60px;
     }
 
     .hero__title{
@@ -649,6 +671,10 @@ body{
 
     .knowledge__link{
         background-color: rgba(0, 0, 0, 0.087)
+    }
+
+    .knowledge__youtube{
+        width: 80px;
     }
 
     .pastores__container{
@@ -703,7 +729,7 @@ body{
     }
 
     .valores__arrow{
-        width: 110%;
+        width: 100%;
     }
 
     .questions__copy{
@@ -759,6 +785,10 @@ body{
 
     .pastores__arrow{
         width: 100%;
+    }
+
+    .arrow--rigth{
+        margin-right: 10px;
     }
 
     .pastores__course{
